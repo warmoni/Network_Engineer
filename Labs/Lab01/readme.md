@@ -12,11 +12,11 @@
 
 ### Схема реализации (drawio)
 
-![router_on_a_stick_scheme.png](Scheme_VLAN_drawio.png)
+![router_on_a_stick_scheme.png](img/Scheme_VLAN_drawio.png)
 
 ### Схема реализации (EVE-NG)
 
-![router_on_a_stick_scheme.png](Scheme_VLAN_eve.png)
+![router_on_a_stick_scheme.png](img/Scheme_VLAN_eve.png)
 
 ### Базовая настройка маршрутизатора R1 и коммутаторов SW1 и SW2
 
@@ -278,17 +278,17 @@ ip route 0.0.0.0 0.0.0.0 192.168.30.1
 
 #### VPC_1 - получение настроек сетевого интерфеса по DHCP
 
-![vpc_1_dhcp.png](vpc_1_dhcp.png)
+![vpc_1_dhcp.png](img/vpc_1_dhcp.png)
 
 #### VPC_2 - получение настроек сетевого интерфеса по DHCP
 
-![vpc_2_dhcp.png](vpc_2_dhcp.png)
+![vpc_2_dhcp.png](img/vpc_2_dhcp.png)
 
 #### Проверка доступности сетей 192.168.20.0/24, 192.168.30.0/24 с VPC_1 (192.168.10.0/24)
 
-![vpc_1_ping.png](vpc_1_ping.png)
+![vpc_1_ping.png](img/vpc_1_ping.png)
 
 #### Проверка доступности сетей 192.168.10.0/24, 192.168.30.0/24 с VPC_2 (192.168.20.0/24)
 
-![vpc_2_ping.png](vpc_2_ping.png)
+![vpc_2_ping.png](img/vpc_2_ping.png)
 
