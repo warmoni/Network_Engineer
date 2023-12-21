@@ -165,8 +165,9 @@ interface Vlan333
 end
 ```
 
-В офисе Москва для резервирования шлюза испльзованы протокололы резервирования
+В офисе Москва для резервирования шлюза испльзованы протоколы резервирования
 первого перехода: VRRP - для IPv4, HSRPv2 - для IPv6.
+Все клиенты получает адреса по DHCP для IPv4 и SLAAC для IPv6.
 
 Настройка на коммутаторе SW4:
 ```
@@ -196,6 +197,20 @@ interface Vlan3
  vrrp 3 ip 10.0.3.1
  vrrp 3 priority 101
 end
+
+ip dhcp excluded-address 10.0.3.1 10.0.3.3
+ip dhcp excluded-address 10.0.2.1 10.0.2.128
+ip dhcp excluded-address 10.0.3.128 10.0.3.254
+!
+ip dhcp pool HOSTS_VLAN_2
+ network 10.0.2.0 255.255.255.0
+ default-router 10.0.2.1
+ dns-server 1.1.1.1 77.88.8.8
+!
+ip dhcp pool HOSTS_VLAN_3
+ network 10.0.3.0 255.255.255.0
+ dns-server 1.1.1.1 77.88.8.8
+ default-router 10.0.3.1
 ```
 
 Настройка на коммутаторе SW5:
@@ -226,4 +241,18 @@ interface Vlan3
  vrrp 3 description Gateway_VLAN_3
  vrrp 3 ip 10.0.3.1
 end
+
+ip dhcp excluded-address 10.0.2.1 10.0.2.3
+ip dhcp excluded-address 10.0.2.128 10.0.2.254
+ip dhcp excluded-address 10.0.3.1 10.0.3.128
+!
+ip dhcp pool DHCP_VLAN_2
+ network 10.0.2.0 255.255.255.0
+ default-router 10.0.2.1
+ dns-server 1.1.1.1 77.88.8.8
+!
+ip dhcp pool HOSTS_VLAN_3
+ network 10.0.3.0 255.255.255.0
+ dns-server 1.1.1.1 77.88.8.8
+ default-router 10.0.3.1
 ```
