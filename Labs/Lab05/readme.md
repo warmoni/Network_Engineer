@@ -65,11 +65,15 @@ VPC31 - ip address 10.0.29.3
 Трассировка на адрес 8.8.8.8
 
 ![trace30.png](img%2Ftrace30.png)
+
+
 ![trace31.png](img%2Ftrace31.png)
 
 Трассировка на тот же адрес после падения линка между R28 и R26:
 
 ![trace30_2.png](img%2Ftrace30_2.png)
+
+
 ![trace31_2.png](img%2Ftrace31_2.png)
 
 Логи на роутере R28:
