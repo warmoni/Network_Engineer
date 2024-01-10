@@ -35,6 +35,8 @@ track 2 ip sla 2 reachability
 ip route 0.0.0.0 0.0.0.0 52.0.0.9 50 track 1
 ip route 0.0.0.0 0.0.0.0 52.0.0.5 100
 !
+ipv6 route ::/0 2001:DB8:520:52::8:9
+!
 ip access-list standard Even
  permit 10.0.29.0 0.0.0.254
  deny   any
@@ -113,5 +115,6 @@ Operation time to live: Forever
 
 ```
 ip route 0.0.0.0 0.0.0.0 52.0.0.1
+ipv6 route ::/0 2001:DB8:520:52::1
 ```
 
