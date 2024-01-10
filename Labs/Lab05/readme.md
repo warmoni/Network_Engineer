@@ -62,6 +62,7 @@ route-map Balance_29 permit 10
 ### Проверка PBR и IP SLA.
 
 VPC30 - ip address 10.0.29.2
+
 VPC31 - ip address 10.0.29.3
 
 Трассировка на адрес 8.8.8.8
