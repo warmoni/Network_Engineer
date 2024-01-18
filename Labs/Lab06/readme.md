@@ -116,15 +116,6 @@ router ospf 110
  router-id 5.5.5.5
  area 10 stub
 !
-ip forward-protocol nd
-!
-no ip http server
-no ip http secure-server
-!
-ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-!
-!
 ipv6 router ospf 110
  router-id 5.5.5.5
  area 10 stub
@@ -178,7 +169,7 @@ interface Ethernet0/0
  ipv6 ospf network point-to-point
 ```
 Аналогично настроены порты на остальных участниках OSPF, кроме VLAN-интерфейсов на коммутаторах SW4 И SW5.
-Так как теоретически на данных портах может быть более двух участников а значит нужны DR и BDR,
+Так как теоретически на данных портах может быть более двух участников, а значит нужны DR и BDR,
 они не могут быть point-to-point.
 Пример настройки VLAN-интерфейса VLAN 333 коммутатора SW4:
 ```
@@ -731,4 +722,3 @@ VPC1> ping 172.16.1.34
 ```
 
 Как видно все сети доступны.
-\
