@@ -61,6 +61,13 @@ vlan internal allocation policy ascending
 !
 !
 !
+interface Loopback1
+ description Management
+ ip address 192.168.254.9 255.255.255.255
+ ipv6 address FE80::192:168:254:9 link-local
+ ipv6 address FD00:3CD5:2042:0:192:168:254:9/128
+ ipv6 enable
+!
 interface Port-channel1
  no switchport
  ip address 172.16.3.29 255.255.255.252
@@ -133,13 +140,6 @@ interface Vlan9
  ip address 10.0.9.1 255.255.255.0
  ipv6 address FE80::10:0:9:1 link-local
  ipv6 address 2001:DB8:2042:10:0:9:0:1/96
- ipv6 enable
-!
-interface Vlan333
- description Management
- ip address 192.168.5.9 255.255.255.0
- ipv6 address FE80::192:168:5:9 link-local
- ipv6 address FD00:3CD5:2042:0:192:168:5:9/112
  ipv6 enable
 !
 ip forward-protocol nd
