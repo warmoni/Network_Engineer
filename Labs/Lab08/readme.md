@@ -307,7 +307,7 @@ router eigrp AS2042
   topology base
   exit-af-topology
   network 172.16.3.26 0.0.0.0
-  network 192.168.254.26 0.0.0.0
+  network 192.168.254.32 0.0.0.0
   eigrp router-id 32.32.32.32
   eigrp stub connected summary
  exit-address-family
