@@ -547,15 +547,6 @@ Total number of prefixes 2
 
 Трассировка IPv4 с R14 на R18, R27, R28
 ```
-R14#traceroute 52.0.0.10 source lo1
-Type escape sequence to abort.
-Tracing the route to 52.0.0.10
-VRF info: (vrf in name/id, vrf out name/id)
-  1 172.16.1.46 [AS 301] 1 msec 0 msec 1 msec
-  2 100.1.0.6 1 msec 1 msec 1 msec
-  3 30.1.0.2 [AS 301] 1 msec 2 msec 2 msec
-  4 172.16.2.10 [AS 301] 2 msec 2 msec 2 msec
-  5 52.0.0.10 [AS 301] 3 msec *  2 msec
 R14#traceroute 192.168.254.18 source lo1
 Type escape sequence to abort.
 Tracing the route to 192.168.254.18
