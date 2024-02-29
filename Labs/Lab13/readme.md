@@ -281,6 +281,26 @@ interface Tunnel2
  tunnel source Loopback1
  tunnel mode gre multipoint
 !
+interface Ethernet0/2.29
+ description Hosts_VLAN_29
+ encapsulation dot1Q 29
+ ip address 10.0.29.1 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+ ip ospf 110 area 2
+ ipv6 address FE80::10:0:29:1 link-local
+ ipv6 address 2001:DB8:1001:10:0:29:0:1/96
+ ipv6 enable
+!
+interface Ethernet0/2.333
+ description Management_SW29
+ encapsulation dot1Q 333
+ ip address 192.168.4.28 255.255.255.248
+ ip ospf 110 area 2
+ ipv6 address FE80::192:168:4:28 link-local
+ ipv6 address FD00:3CD5:1001:0:192:168:4:28/112
+ ipv6 enable
+!
 router ospf 110
  router-id 28.28.28.28
 !
