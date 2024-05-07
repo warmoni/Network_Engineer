@@ -22,188 +22,188 @@
 ### Разработка адресного пространства IPv4
 
 
-|                                    |              |TTK AS15774                  |                |      |    
-|------------------------------------------------|--------------|-----------------|----------------|------|
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| TTK_R1                                         | E0/0         | To_MSK-IX       | 195.208.24.2   | /21  |
-|                                                | E0/1         | To_RST_R1       | 1.5.51.2       | /30  |
-|                              |              |Мегафон AS31133                    |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| Megafon_R1                                     | E0/0         | To_Megafon_R2   | 85.26.242.1    | /30  |
-|                                                | E0/1         | To_MSK-IX       | 195.208.24.3   | /21  |
-|                                                | E0/2         | To_L-com_R1     | 85.26.242.5    | /30  |
-|                                                | E0/3         | To_RST_R2       | 1.5.51.6       | /30  |
-| Megafon_R2                                     | E0/0         | To_Megafon_R1   | 85.26.242.2    | /30  |
-|                                                | E0/1         | To_UT-com_R1    | 85.26.242.9    | /30  |
-|                                     |              |                 | РТК AS12389               |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| RTK_R1                                         | E0/0         | To_RTK_R1       | 79.133.64.1    | /30  |
-|                                                | E0/1         | To_UT-com_R1    | 79.133.64.5    | /30  |
-|                                                | E0/2         | To_MSK-IX       | 195.208.24.5   | /21  |
-| RTK_R2                                         | E0/0         | To_RTK_R2       | 79.133.64.2    | /30  |
-|                                                | E0/1         | To_T-com_R1     | 79.133.64.9    | /30  |
-|                                                | E0/2         | To_Miranda_R1   | 79.133.64.13   | /30  |
-|                               |              | Миранда AS201776                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| Miranda_R1                                     | E0/0         | To_ZPR_R1       | 94.126.24.1    | /30  |
-|                                                | E0/1         | To_RTK_R2       | 79.133.64.14   | /30  |
-|                               |              |  К-Телеком AS43733               |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| K-Telecom_R1                                   | E0/0         | To_MSK-IX       | 195.208.24.6   | /21  |
-|                                                | E0/1         | To_HRS_R1       | 46.130.0.1     | /30  |
-|                                    |              |L-com AS4321                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| Lugacom_R1                                     | E0/0         | To_LPR_R1       | 5.42.216.1     | /30  |
-|                                                | E0/1         | To_UT-com_R1    | 176.96.184.10  | /30  |
-|                                                | E0/2         | To_Megafon_R1   | 85.26.242.6    | /30  |
-|                                 |              |UT-com AS26810                  |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| Ugletelecom_R1                                 | E0/0         | To_DPR_R1       | 176.96.184.5   | /30  |
-|                                                | E0/1         | To_Megafon_R2   | 85.26.242.10   | /30  |
-|                                                | E0/2         | To_T-com_R1     | 176.96.184.1   | /30  |
-|                                                | E0/3         | To_RTK_R1       | 79.133.64.6    | /30  |
-|                                                | E1/0         | To_L-com_R1     | 176.96.184.9   | /30  |
-|                                                | E1/1         | To_MSK-IX       | 195.208.24.4   | /21  |
-|                                  |              |T-com AS22279                  |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| Comtel_R1                                      | E0/0         | To_DPR_R1       | 31.133.48.1    | /30  |
-|                                                | E0/1         | To_RTK_R2       | 79.133.64.10   | /30  |
-|                                                | E0/2         | To_UT-com_R1    | 176.96.184.2   | /30  |
-|                                   |              |MSK-IX AS8985                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| RS                                             | E0           | Route Server    | 195.208.24.1   | /21  |
-|  |              |Центральный офис в Ростовской области (AS1551)                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| RST_R1                                         | e0/0         | To-TTK_R1       | 1.5.51.1       | /30  |
-|                                                | e0/1         | To-RST_DSW1     | 172.16.1.9     | /30  |
-|                                                | e0/2         | To-RST_DHCP     | 172.16.1.5     | /30  |
-|                                                | e0/3         | To-RST_R2       | 172.16.1.1     | /30  |
-|                                                | Lo 1         | MNG             | 172.16.1.254   | /32  |
-| RST_R2                                         | e0/0         | To_Megafon_R1   | 1.5.51.5       | /30  |
-|                                                | e0/1         | To-RST_DSW2     | 172.16.1.17    | /30  |
-|                                                | e0/2         | To-RST_DHCP     | 172.16.1.53    | /30  |
-|                                                | e0/3         | To-RST_R1       | 172.16.1.2     | /30  |
-|                                                | Lo 0         | For_Tun1        | 1.5.51.254     | /32  |
-|                                                | Lo 1         | MNG             | 172.16.1.253   | /32  |
-|                                                | Tunnel 1     |                 | 10.200.0.1     | /27  |
-| RST_DHCP                                       | e0/0         | To-RST_R1       | 172.16.1.6     | /30  |
-|                                                | e0/1         | To-RST_R2       | 172.16.1.54    | /30  |
-|                                                | e0/2         | To-RST_DSW1     | 172.16.1.21    | /30  |
-|                                                | e0/3         | To-RST_DSW2     | 172.16.1.13    | /30  |
-|                                                | Lo1          | MNG             | 172.16.1.247   | /32  |
-| RST_DSW1                                       | e0/0         | To-RST_R1       | 172.16.1.10    | /30  |
-|                                                | e0/1         | To-RST_DHCP     | 172.16.1.22    | /30  |
-|                                                | Po1          | To-RST_DSW2     | 172.16.1.25    | /30  |
-|                                                | e1/0         | To-RST_ASW1     | 172.16.1.29    | /30  |
-|                                                | e1/1         | To-RST_ASW2     | 172.16.1.33    | /30  |
-|                                                | e1/2         | To-RST_ASW3     | 172.16.1.37    | /30  |
-|                                                | Lo1          | MNG             | 172.16.1.252   | /32  |
-| RST_DSW2                                       | e0/0         | To-RST_R2       | 172.16.1.18    | /30  |
-|                                                | e0/1         | To-RST_DHCP     | 172.16.1.14    | /30  |
-|                                                | Po1          | To-RST_DSW1     | 172.16.1.26    | /30  |
-|                                                | e1/0         | To-RST_ASW1     | 172.16.1.41    | /30  |
-|                                                | e1/1         | To-RST_ASW2     | 172.16.1.45    | /30  |
-|                                                | e1/2         | To-RST_ASW3     | 172.16.1.49    | /30  |
-|                                                | Lo1          | MNG             | 172.16.1.251   | /32  |
-| RST_ASW1                                       | e0/0         | To-RST_DSW1     | 172.16.1.30    | /30  |
-|                                                | e0/1         | To-RST_DSW2     | 172.16.1.42    | /30  |
-|                                                | Vlan2        | Gateway_VLAN2   | 192.168.1.1    | /27  |
-|                                                | Vlan3        | Gateway_VLAN3   | 192.168.1.33   | /27  |
-|                                                | Lo1          | MNG             | 172.16.1.250   | /32  |
-| RST_ASW2                                       | e0/0         | To-RST_DSW1     | 172.16.1.34    | /30  |
-|                                                | e0/1         | To-RST_DSW2     | 172.16.1.46    | /30  |
-|                                                | Vlan2        | Gateway_VLAN4   | 192.168.1.65   | /27  |
-|                                                | Vlan3        | Gateway_VLAN5   | 192.168.1.97   | /27  |
-|                                                | Lo1          | MNG             | 172.16.1.249   | /32  |
-| RST_ASW3                                       | e0/0         | To-RST_DSW1     | 172.16.1.38    | /30  |
-|                                                | e0/1         | To-RST_DSW2     | 172.16.1.50    | /30  |
-|                                                | Vlan2        | Gateway_VLAN6   | 192.168.1.129  | /27  |
-|                                                | Vlan3        | Gateway_VLAN7   | 192.168.1.161  | /27  |
-|                                                | Lo1          | MNG             | 172.16.1.248   | /32  |
-|                                    |              | Филиал в ЛНР                |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| LPR_R1                                         | e0/0         | To_L-com_R1     | 5.42.216.2     | /30  |
-|                                                | e0/1         | To-LPR_DSW1     | 172.16.2.1     | /30  |
-|                                                | Lo1          | MNG             | 172.16.2.254   | /32  |
-|                                                | Tunnel 1     |                 | 10.200.0.3     | /27  |
-| LPR_DSW1                                       | e0/0         | To-LPR_R1       | 172.16.2.2     | /30  |
-|                                                | e0/1         | To-LPR_ASW1     | 172.16.2.5     | /30  |
-|                                                | e0/2         | To-LPR_ASW2     | 172.16.2.9     | /30  |
-|                                                | e0/3         | To-LPR_ASW3     | 172.16.2.13    | /30  |
-|                                                | Lo1          | MNG             | 172.16.2.253   | /32  |
-| LPR_ASW1                                       | e0/0         | To-LPR_DSW1     | 172.16.2.6     | /30  |
-|                                                | e0/1         | To-LPR_ASW2     | 172.16.2.17    | /30  |
-|                                                | Vlan2        | Gateway_VLAN2   | 192.168.2.1    | /27  |
-|                                                | Lo1          | MNG             | 172.16.2.252   | /32  |
-| LPR_ASW2                                       | e0/0         | To-LPR_DSW1     | 172.16.2.10    | /30  |
-|                                                | e0/1         | To-LPR_ASW1     | 172.16.2.18    | /30  |
-|                                                | e0/2         | To-LPR_ASW3     | 172.16.2.22    | /30  |
-|                                                | Vlan4        | Gateway_VLAN4   | 192.168.2.65   | /27  |
-|                                                | Vlan6        | Gateway_VLAN6   | 192.168.2.97   | /27  |
-|                                                | Lo1          | MNG             | 172.16.2.251   | /32  |
-| LPR_ASW3                                       | e0/0         | To-LPR_DSW1     | 172.16.2.14    | /30  |
-|                                                | e0/1         | To-LPR_ASW2     | 172.16.2.21    | /30  |
-|                                                | Vlan3        | Gateway_VLAN3   | 192.168.2.33   | /27  |
-|                                                | Lo1          | MNG             | 172.16.2.250   | /32  |
-|                                    |              |Филиал в ДНР                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| DPR_R1                                         | e0/0         | To_UT-com_R1    | 176.96.184.6   | /30  |
-|                                                | e0/1         | To-DPR_DSW1     | 172.16.3.1     | /30  |
-|                                                | e0/2         | To-DPR_DHCP     | 172.16.3.9     | /30  |
-|                                                | e1/0         | To_T-com_R1     | 31.133.48.2    | /30  |
-|                                                | e1/1         | To-DPR_DSW2     | 172.16.3.5     | /30  |
-|                                                | Lo0          | For_NAT         | 176.96.184.13  | /30  |
-|                                                | Lo1          | MNG             | 172.16.3.254   | /32  |
-|                                                | Tunnel 1     |                 | 10.200.0.4     | /27  |
-| DPR_DHCP                                       | e0/0         | To-DPR_DSW1     | 172.16.3.14    | /30  |
-|                                                | e0/1         | To-DPR_DSW2     | 172.16.3.18    | /30  |
-|                                                | e0/2         | To-DPR_R1       | 172.16.3.10    | /30  |
-|                                                | Lo1          | MNG             | 172.16.3.248   | /32  |
-| DPR_DSW1                                       | e0/0         | To-DPR_R1       | 172.16.3.2     | /30  |
-|                                                | e0/1         | To-DPR_DHCP     | 172.16.3.13    | /30  |
-|                                                | e0/2         | To-DPR_ASW1     | 172.16.3.21    | /30  |
-|                                                | e0/3         | To-DPR_ASW2     | 172.16.3.25    | /30  |
-|                                                | e1/0         | To-DPR_ASW3     | 172.16.3.29    | /30  |
-|                                                | Lo1          | MNG             | 172.16.3.253   | /32  |
-| DPR_DSW2                                       | e0/0         | TO-DPR_R1       | 172.16.3.6     | /30  |
-|                                                | e0/1         | To-DPR_DHCP     | 172.16.3.17    | /30  |
-|                                                | e0/2         | To-DPR_ASW1     | 172.16.3.33    | /30  |
-|                                                | e0/3         | To-DPR_ASW2     | 172.16.3.37    | /30  |
-|                                                | e1/0         | To-DPR_ASW3     | 172.16.3.41    | /30  |
-|                                                | Lo1          | MNG             | 172.16.3.252   | /32  |
-| DPR_ASW1                                       | e0/0         | To-DPR_DSW1     | 172.16.3.22    | /30  |
-|                                                | e1/0         | To-DPR_DSW2     | 172.16.3.34    | /30  |
-|                                                | Vlan2        | Gateway_VLAN2   | 192.168.3.1    | /27  |
-|                                                | Vlan3        | Gateway_VLAN3   | 192.168.3.33   | /27  |
-|                                                | Lo1          | MNG             | 172.16.3.251   | /32  |
-| DPR_ASW2                                       | e0/0         | To-DPR_DSW1     | 172.16.3.26    | /30  |
-|                                                | e1/0         | To-DPR_DSW2     | 172.16.3.38    | /30  |
-|                                                | Vlan4        | Gateway_VLAN4   | 192.168.3.65   | /27  |
-|                                                | Lo1          | MNG             | 172.16.3.250   | /32  |
-| DPR_ASW3                                       | e0/0         | To-DPR_DSW1     | 172.16.3.30    | /30  |
-|                                                | e1/0         | To-DPR_DSW2     | 172.16.3.42    | /30  |
-|                                                | Vlan6        | Gateway_VLAN6   | 172.16.3.249   | /27  |
-|                                                | Lo1          | MNG             | 192.168.3.97   | /32  |
-|                    |              | Филиал в Запорожской области                |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| ZPR_R1                                         | e0/0         | To_Miranda_R1   | 94.126.24.2    | /30  |
-|                                                | e0/1.4       | Gateway_VLAN4   | 192.168.4.65   | /27  |
-|                                                | e0/1.6       | Gateway_VLAN6   | 192.168.4.129  | /27  |
-|                                                | e0/1.333     | MNG             | 172.16.4.1     | /29  |
-|                                                | Tunnel 1     |                 | 10.200.0.2     | /27  |
-| ZPR_DSW1                                       | Vlan333      | MNG             | 172.16.4.2     | /29  |
-| ZPR_ASW1                                       | Vlan333      | MNG             | 172.16.4.3     | /29  |
-| ZPR_ASW2                                       | Vlan333      | MNG             | 172.16.4.4     | /29  |
-|                     |              |Филиал в Херсонской области                 |                |      |
-| Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
-| ZPR_R1                                         | e0/0         | To_K-Telecom_R1 | 46.130.0.2     | /30  |
-|                                                | e0/1.4       | Gateway_VLAN4   | 192.168.5.65   | /27  |
-|                                                | e0/1.6       | Gateway_VLAN6   | 192.168.5.129  | /27  |
-|                                                | e0/1.333     | MNG             | 172.16.5.1     | /29  |
-|                                                | Tunnel 1     |                 | 10.200.0.5     | /27  |
-| ZPR_DSW1                                       | Vlan333      | MNG             | 172.16.5.2     | /29  |
-| ZPR_ASW1                                       | Vlan333      | MNG             | 172.16.5.3     | /29  |
-| ZPR_ASW2                                       | Vlan333      | MNG             | 172.16.5.4     | /29  |
+|                                                  |                |                   TTK AS15774                   |                  |        |    
+|:------------------------------------------------:|:--------------:|:-----------------------------------------------:|:----------------:|:------:|
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      TTK_R1                      |      E0/0      |                    To_MSK-IX                    |   195.208.24.2   |  /21   |
+|                                                  |      E0/1      |                    To_RST_R1                    |     1.5.51.2     |  /30   |
+|                                                  |                |                 Мегафон AS31133                 |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                    Megafon_R1                    |      E0/0      |                  To_Megafon_R2                  |   85.26.242.1    |  /30   |
+|                                                  |      E0/1      |                    To_MSK-IX                    |   195.208.24.3   |  /21   |
+|                                                  |      E0/2      |                   To_L-com_R1                   |   85.26.242.5    |  /30   |
+|                                                  |      E0/3      |                    To_RST_R2                    |     1.5.51.6     |  /30   |
+|                    Megafon_R2                    |      E0/0      |                  To_Megafon_R1                  |   85.26.242.2    |  /30   |
+|                                                  |      E0/1      |                  To_UT-com_R1                   |   85.26.242.9    |  /30   |
+|                                                  |                |                   РТК AS12389                   |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      RTK_R1                      |      E0/0      |                    To_RTK_R1                    |   79.133.64.1    |  /30   |
+|                                                  |      E0/1      |                  To_UT-com_R1                   |   79.133.64.5    |  /30   |
+|                                                  |      E0/2      |                    To_MSK-IX                    |   195.208.24.5   |  /21   |
+|                      RTK_R2                      |      E0/0      |                    To_RTK_R2                    |   79.133.64.2    |  /30   |
+|                                                  |      E0/1      |                   To_T-com_R1                   |   79.133.64.9    |  /30   |
+|                                                  |      E0/2      |                  To_Miranda_R1                  |   79.133.64.13   |  /30   |
+|                                                  |                |                Миранда AS201776                 |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                    Miranda_R1                    |      E0/0      |                    To_ZPR_R1                    |   94.126.24.1    |  /30   |
+|                                                  |      E0/1      |                    To_RTK_R2                    |   79.133.64.14   |  /30   |
+|                                                  |                |                К-Телеком AS43733                |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                   K-Telecom_R1                   |      E0/0      |                    To_MSK-IX                    |   195.208.24.6   |  /21   |
+|                                                  |      E0/1      |                    To_HRS_R1                    |    46.130.0.1    |  /30   |
+|                                                  |                |                  L-com AS4321                   |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                    Lugacom_R1                    |      E0/0      |                    To_LPR_R1                    |    5.42.216.1    |  /30   |
+|                                                  |      E0/1      |                  To_UT-com_R1                   |  176.96.184.10   |  /30   |
+|                                                  |      E0/2      |                  To_Megafon_R1                  |   85.26.242.6    |  /30   |
+|                                                  |                |                 UT-com AS26810                  |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                  Ugletelecom_R1                  |      E0/0      |                    To_DPR_R1                    |   176.96.184.5   |  /30   |
+|                                                  |      E0/1      |                  To_Megafon_R2                  |   85.26.242.10   |  /30   |
+|                                                  |      E0/2      |                   To_T-com_R1                   |   176.96.184.1   |  /30   |
+|                                                  |      E0/3      |                    To_RTK_R1                    |   79.133.64.6    |  /30   |
+|                                                  |      E1/0      |                   To_L-com_R1                   |   176.96.184.9   |  /30   |
+|                                                  |      E1/1      |                    To_MSK-IX                    |   195.208.24.4   |  /21   |
+|                                                  |                |                  T-com AS22279                  |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                    Comtel_R1                     |      E0/0      |                    To_DPR_R1                    |   31.133.48.1    |  /30   |
+|                                                  |      E0/1      |                    To_RTK_R2                    |   79.133.64.10   |  /30   |
+|                                                  |      E0/2      |                  To_UT-com_R1                   |   176.96.184.2   |  /30   |
+|                                                  |                |                  MSK-IX AS8985                  |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                        RS                        |       E0       |                  Route Server                   |   195.208.24.1   |  /21   |
+|                                                  |                | Центральный офис в Ростовской области (AS1551)  |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      RST_R1                      |      e0/0      |                    To-TTK_R1                    |     1.5.51.1     |  /30   |
+|                                                  |      e0/1      |                   To-RST_DSW1                   |    172.16.1.9    |  /30   |
+|                                                  |      e0/2      |                   To-RST_DHCP                   |    172.16.1.5    |  /30   |
+|                                                  |      e0/3      |                    To-RST_R2                    |    172.16.1.1    |  /30   |
+|                                                  |      Lo 1      |                       MNG                       |   172.16.1.254   |  /32   |
+|                      RST_R2                      |      e0/0      |                  To_Megafon_R1                  |     1.5.51.5     |  /30   |
+|                                                  |      e0/1      |                   To-RST_DSW2                   |   172.16.1.17    |  /30   |
+|                                                  |      e0/2      |                   To-RST_DHCP                   |   172.16.1.53    |  /30   |
+|                                                  |      e0/3      |                    To-RST_R1                    |    172.16.1.2    |  /30   |
+|                                                  |      Lo 0      |                    For_Tun1                     |    1.5.51.254    |  /32   |
+|                                                  |      Lo 1      |                       MNG                       |   172.16.1.253   |  /32   |
+|                                                  |    Tunnel 1    |                                                 |    10.200.0.1    |  /27   |
+|                     RST_DHCP                     |      e0/0      |                    To-RST_R1                    |    172.16.1.6    |  /30   |
+|                                                  |      e0/1      |                    To-RST_R2                    |   172.16.1.54    |  /30   |
+|                                                  |      e0/2      |                   To-RST_DSW1                   |   172.16.1.21    |  /30   |
+|                                                  |      e0/3      |                   To-RST_DSW2                   |   172.16.1.13    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.247   |  /32   |
+|                     RST_DSW1                     |      e0/0      |                    To-RST_R1                    |   172.16.1.10    |  /30   |
+|                                                  |      e0/1      |                   To-RST_DHCP                   |   172.16.1.22    |  /30   |
+|                                                  |      Po1       |                   To-RST_DSW2                   |   172.16.1.25    |  /30   |
+|                                                  |      e1/0      |                   To-RST_ASW1                   |   172.16.1.29    |  /30   |
+|                                                  |      e1/1      |                   To-RST_ASW2                   |   172.16.1.33    |  /30   |
+|                                                  |      e1/2      |                   To-RST_ASW3                   |   172.16.1.37    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.252   |  /32   |
+|                     RST_DSW2                     |      e0/0      |                    To-RST_R2                    |   172.16.1.18    |  /30   |
+|                                                  |      e0/1      |                   To-RST_DHCP                   |   172.16.1.14    |  /30   |
+|                                                  |      Po1       |                   To-RST_DSW1                   |   172.16.1.26    |  /30   |
+|                                                  |      e1/0      |                   To-RST_ASW1                   |   172.16.1.41    |  /30   |
+|                                                  |      e1/1      |                   To-RST_ASW2                   |   172.16.1.45    |  /30   |
+|                                                  |      e1/2      |                   To-RST_ASW3                   |   172.16.1.49    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.251   |  /32   |
+|                     RST_ASW1                     |      e0/0      |                   To-RST_DSW1                   |   172.16.1.30    |  /30   |
+|                                                  |      e0/1      |                   To-RST_DSW2                   |   172.16.1.42    |  /30   |
+|                                                  |     Vlan2      |                  Gateway_VLAN2                  |   192.168.1.1    |  /27   |
+|                                                  |     Vlan3      |                  Gateway_VLAN3                  |   192.168.1.33   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.250   |  /32   |
+|                     RST_ASW2                     |      e0/0      |                   To-RST_DSW1                   |   172.16.1.34    |  /30   |
+|                                                  |      e0/1      |                   To-RST_DSW2                   |   172.16.1.46    |  /30   |
+|                                                  |     Vlan2      |                  Gateway_VLAN4                  |   192.168.1.65   |  /27   |
+|                                                  |     Vlan3      |                  Gateway_VLAN5                  |   192.168.1.97   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.249   |  /32   |
+|                     RST_ASW3                     |      e0/0      |                   To-RST_DSW1                   |   172.16.1.38    |  /30   |
+|                                                  |      e0/1      |                   To-RST_DSW2                   |   172.16.1.50    |  /30   |
+|                                                  |     Vlan2      |                  Gateway_VLAN6                  |  192.168.1.129   |  /27   |
+|                                                  |     Vlan3      |                  Gateway_VLAN7                  |  192.168.1.161   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.1.248   |  /32   |
+|                                                  |                |                  Филиал в ЛНР                   |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      LPR_R1                      |      e0/0      |                   To_L-com_R1                   |    5.42.216.2    |  /30   |
+|                                                  |      e0/1      |                   To-LPR_DSW1                   |    172.16.2.1    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.2.254   |  /32   |
+|                                                  |    Tunnel 1    |                                                 |    10.200.0.3    |  /27   |
+|                     LPR_DSW1                     |      e0/0      |                    To-LPR_R1                    |    172.16.2.2    |  /30   |
+|                                                  |      e0/1      |                   To-LPR_ASW1                   |    172.16.2.5    |  /30   |
+|                                                  |      e0/2      |                   To-LPR_ASW2                   |    172.16.2.9    |  /30   |
+|                                                  |      e0/3      |                   To-LPR_ASW3                   |   172.16.2.13    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.2.253   |  /32   |
+|                     LPR_ASW1                     |      e0/0      |                   To-LPR_DSW1                   |    172.16.2.6    |  /30   |
+|                                                  |      e0/1      |                   To-LPR_ASW2                   |   172.16.2.17    |  /30   |
+|                                                  |     Vlan2      |                  Gateway_VLAN2                  |   192.168.2.1    |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.2.252   |  /32   |
+|                     LPR_ASW2                     |      e0/0      |                   To-LPR_DSW1                   |   172.16.2.10    |  /30   |
+|                                                  |      e0/1      |                   To-LPR_ASW1                   |   172.16.2.18    |  /30   |
+|                                                  |      e0/2      |                   To-LPR_ASW3                   |   172.16.2.22    |  /30   |
+|                                                  |     Vlan4      |                  Gateway_VLAN4                  |   192.168.2.65   |  /27   |
+|                                                  |     Vlan6      |                  Gateway_VLAN6                  |   192.168.2.97   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.2.251   |  /32   |
+|                     LPR_ASW3                     |      e0/0      |                   To-LPR_DSW1                   |   172.16.2.14    |  /30   |
+|                                                  |      e0/1      |                   To-LPR_ASW2                   |   172.16.2.21    |  /30   |
+|                                                  |     Vlan3      |                  Gateway_VLAN3                  |   192.168.2.33   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.2.250   |  /32   |
+|                                                  |                |                  Филиал в ДНР                   |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      DPR_R1                      |      e0/0      |                  To_UT-com_R1                   |   176.96.184.6   |  /30   |
+|                                                  |      e0/1      |                   To-DPR_DSW1                   |    172.16.3.1    |  /30   |
+|                                                  |      e0/2      |                   To-DPR_DHCP                   |    172.16.3.9    |  /30   |
+|                                                  |      e1/0      |                   To_T-com_R1                   |   31.133.48.2    |  /30   |
+|                                                  |      e1/1      |                   To-DPR_DSW2                   |    172.16.3.5    |  /30   |
+|                                                  |      Lo0       |                     For_NAT                     |  176.96.184.13   |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.254   |  /32   |
+|                                                  |    Tunnel 1    |                                                 |    10.200.0.4    |  /27   |
+|                     DPR_DHCP                     |      e0/0      |                   To-DPR_DSW1                   |   172.16.3.14    |  /30   |
+|                                                  |      e0/1      |                   To-DPR_DSW2                   |   172.16.3.18    |  /30   |
+|                                                  |      e0/2      |                    To-DPR_R1                    |   172.16.3.10    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.248   |  /32   |
+|                     DPR_DSW1                     |      e0/0      |                    To-DPR_R1                    |    172.16.3.2    |  /30   |
+|                                                  |      e0/1      |                   To-DPR_DHCP                   |   172.16.3.13    |  /30   |
+|                                                  |      e0/2      |                   To-DPR_ASW1                   |   172.16.3.21    |  /30   |
+|                                                  |      e0/3      |                   To-DPR_ASW2                   |   172.16.3.25    |  /30   |
+|                                                  |      e1/0      |                   To-DPR_ASW3                   |   172.16.3.29    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.253   |  /32   |
+|                     DPR_DSW2                     |      e0/0      |                    TO-DPR_R1                    |    172.16.3.6    |  /30   |
+|                                                  |      e0/1      |                   To-DPR_DHCP                   |   172.16.3.17    |  /30   |
+|                                                  |      e0/2      |                   To-DPR_ASW1                   |   172.16.3.33    |  /30   |
+|                                                  |      e0/3      |                   To-DPR_ASW2                   |   172.16.3.37    |  /30   |
+|                                                  |      e1/0      |                   To-DPR_ASW3                   |   172.16.3.41    |  /30   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.252   |  /32   |
+|                     DPR_ASW1                     |      e0/0      |                   To-DPR_DSW1                   |   172.16.3.22    |  /30   |
+|                                                  |      e1/0      |                   To-DPR_DSW2                   |   172.16.3.34    |  /30   |
+|                                                  |     Vlan2      |                  Gateway_VLAN2                  |   192.168.3.1    |  /27   |
+|                                                  |     Vlan3      |                  Gateway_VLAN3                  |   192.168.3.33   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.251   |  /32   |
+|                     DPR_ASW2                     |      e0/0      |                   To-DPR_DSW1                   |   172.16.3.26    |  /30   |
+|                                                  |      e1/0      |                   To-DPR_DSW2                   |   172.16.3.38    |  /30   |
+|                                                  |     Vlan4      |                  Gateway_VLAN4                  |   192.168.3.65   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   172.16.3.250   |  /32   |
+|                     DPR_ASW3                     |      e0/0      |                   To-DPR_DSW1                   |   172.16.3.30    |  /30   |
+|                                                  |      e1/0      |                   To-DPR_DSW2                   |   172.16.3.42    |  /30   |
+|                                                  |     Vlan6      |                  Gateway_VLAN6                  |   172.16.3.249   |  /27   |
+|                                                  |      Lo1       |                       MNG                       |   192.168.3.97   |  /32   |
+|                                                  |                |          Филиал в Запорожской области           |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      ZPR_R1                      |      e0/0      |                  To_Miranda_R1                  |   94.126.24.2    |  /30   |
+|                                                  |     e0/1.4     |                  Gateway_VLAN4                  |   192.168.4.65   |  /27   |
+|                                                  |     e0/1.6     |                  Gateway_VLAN6                  |  192.168.4.129   |  /27   |
+|                                                  |    e0/1.333    |                       MNG                       |    172.16.4.1    |  /29   |
+|                                                  |    Tunnel 1    |                                                 |    10.200.0.2    |  /27   |
+|                     ZPR_DSW1                     |    Vlan333     |                       MNG                       |    172.16.4.2    |  /29   |
+|                     ZPR_ASW1                     |    Vlan333     |                       MNG                       |    172.16.4.3    |  /29   |
+|                     ZPR_ASW2                     |    Vlan333     |                       MNG                       |    172.16.4.4    |  /29   |
+|                                                  |                |           Филиал в Херсонской области           |                  |        |
+|                     Hostname                     |  L3 interface  |                   Description                   |   IPv4-address   |  Mask  |
+|                      ZPR_R1                      |      e0/0      |                 To_K-Telecom_R1                 |    46.130.0.2    |  /30   |
+|                                                  |     e0/1.4     |                  Gateway_VLAN4                  |   192.168.5.65   |  /27   |
+|                                                  |     e0/1.6     |                  Gateway_VLAN6                  |  192.168.5.129   |  /27   |
+|                                                  |    e0/1.333    |                       MNG                       |    172.16.5.1    |  /29   |
+|                                                  |    Tunnel 1    |                                                 |    10.200.0.5    |  /27   |
+|                     ZPR_DSW1                     |    Vlan333     |                       MNG                       |    172.16.5.2    |  /29   |
+|                     ZPR_ASW1                     |    Vlan333     |                       MNG                       |    172.16.5.3    |  /29   |
+|                     ZPR_ASW2                     |    Vlan333     |                       MNG                       |    172.16.5.4    |  /29   |
 
 
 
