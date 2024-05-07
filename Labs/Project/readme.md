@@ -22,12 +22,12 @@
 ### Разработка адресного пространства IPv4
 
 
-| TTK AS15774                                    |              |                 |                |      |
+|                                               TTK AS15774                                               |                                         
 |------------------------------------------------|--------------|-----------------|----------------|------|
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | TTK_R1                                         | E0/0         | To_MSK-IX       | 195.208.24.2   | /21  |
 |                                                | E0/1         | To_RST_R1       | 1.5.51.2       | /30  |
-| Мегафон AS31133                                |              |                 |                |      |
+|                                               Мегафон AS31133                                           |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | Megafon_R1                                     | E0/0         | To_Megafon_R2   | 85.26.242.1    | /30  |
 |                                                | E0/1         | To_MSK-IX       | 195.208.24.3   | /21  |
@@ -35,7 +35,7 @@
 |                                                | E0/3         | To_RST_R2       | 1.5.51.6       | /30  |
 | Megafon_R2                                     | E0/0         | To_Megafon_R1   | 85.26.242.2    | /30  |
 |                                                | E0/1         | To_UT-com_R1    | 85.26.242.9    | /30  |
-| РТК AS12389                                    |              |                 |                |      |
+|                                               РТК AS12389                                               |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | RTK_R1                                         | E0/0         | To_RTK_R1       | 79.133.64.1    | /30  |
 |                                                | E0/1         | To_UT-com_R1    | 79.133.64.5    | /30  |
@@ -43,20 +43,20 @@
 | RTK_R2                                         | E0/0         | To_RTK_R2       | 79.133.64.2    | /30  |
 |                                                | E0/1         | To_T-com_R1     | 79.133.64.9    | /30  |
 |                                                | E0/2         | To_Miranda_R1   | 79.133.64.13   | /30  |
-| Миранда AS201776                               |              |                 |                |      |
+|                                               Миранда AS201776                                          |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | Miranda_R1                                     | E0/0         | To_ZPR_R1       | 94.126.24.1    | /30  |
 |                                                | E0/1         | To_RTK_R2       | 79.133.64.14   | /30  |
-| К-Телеком AS43733                              |              |                 |                |      |
+|                                               К-Телеком AS43733                                         |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | K-Telecom_R1                                   | E0/0         | To_MSK-IX       | 195.208.24.6   | /21  |
 |                                                | E0/1         | To_HRS_R1       | 46.130.0.1     | /30  |
-| L-com AS4321                                   |              |                 |                |      |
+|                                               L-com AS4321                                              |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | Lugacom_R1                                     | E0/0         | To_LPR_R1       | 5.42.216.1     | /30  |
 |                                                | E0/1         | To_UT-com_R1    | 176.96.184.10  | /30  |
 |                                                | E0/2         | To_Megafon_R1   | 85.26.242.6    | /30  |
-| UT-com AS26810                                 |              |                 |                |      |
+|                                               UT-com AS26810                                            |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | Ugletelecom_R1                                 | E0/0         | To_DPR_R1       | 176.96.184.5   | /30  |
 |                                                | E0/1         | To_Megafon_R2   | 85.26.242.10   | /30  |
@@ -64,15 +64,15 @@
 |                                                | E0/3         | To_RTK_R1       | 79.133.64.6    | /30  |
 |                                                | E1/0         | To_L-com_R1     | 176.96.184.9   | /30  |
 |                                                | E1/1         | To_MSK-IX       | 195.208.24.4   | /21  |
-| T-com AS22279                                  |              |                 |                |      |
+|                                               T-com AS22279                                             |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | Comtel_R1                                      | E0/0         | To_DPR_R1       | 31.133.48.1    | /30  |
 |                                                | E0/1         | To_RTK_R2       | 79.133.64.10   | /30  |
 |                                                | E0/2         | To_UT-com_R1    | 176.96.184.2   | /30  |
-| MSK-IX AS8985                                  |              |                 |                |      |
+|                                               MSK-IX AS8985                                             |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | RS                                             | E0           | Route Server    | 195.208.24.1   | /21  |
-| Центральный офис в Ростовской области (AS1551) |              |                 |                |      |
+|                                               Центральный офис в Ростовской области (AS1551)            |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | RST_R1                                         | e0/0         | To-TTK_R1       | 1.5.51.1       | /30  |
 |                                                | e0/1         | To-RST_DSW1     | 172.16.1.9     | /30  |
@@ -120,7 +120,7 @@
 |                                                | Vlan2        | Gateway_VLAN6   | 192.168.1.129  | /27  |
 |                                                | Vlan3        | Gateway_VLAN7   | 192.168.1.161  | /27  |
 |                                                | Lo1          | MNG             | 172.16.1.248   | /32  |
-| Филиал в ЛНР                                   |              |                 |                |      |
+|                                               Филиал в ЛНР                                              |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | LPR_R1                                         | e0/0         | To_L-com_R1     | 5.42.216.2     | /30  |
 |                                                | e0/1         | To-LPR_DSW1     | 172.16.2.1     | /30  |
@@ -145,7 +145,7 @@
 |                                                | e0/1         | To-LPR_ASW2     | 172.16.2.21    | /30  |
 |                                                | Vlan3        | Gateway_VLAN3   | 192.168.2.33   | /27  |
 |                                                | Lo1          | MNG             | 172.16.2.250   | /32  |
-| Филиал в ДНР                                   |              |                 |                |      |
+|                                               Филиал в ДНР                                              |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | DPR_R1                                         | e0/0         | To_UT-com_R1    | 176.96.184.6   | /30  |
 |                                                | e0/1         | To-DPR_DSW1     | 172.16.3.1     | /30  |
@@ -184,7 +184,7 @@
 |                                                | e1/0         | To-DPR_DSW2     | 172.16.3.42    | /30  |
 |                                                | Vlan6        | Gateway_VLAN6   | 172.16.3.249   | /27  |
 |                                                | Lo1          | MNG             | 192.168.3.97   | /32  |
-| Филиал в Запорожской области                   |              |                 |                |      |
+|                                               Филиал в Запорожской области                              |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | ZPR_R1                                         | e0/0         | To_Miranda_R1   | 94.126.24.2    | /30  |
 |                                                | e0/1.4       | Gateway_VLAN4   | 192.168.4.65   | /27  |
@@ -194,7 +194,7 @@
 | ZPR_DSW1                                       | Vlan333      | MNG             | 172.16.4.2     | /29  |
 | ZPR_ASW1                                       | Vlan333      | MNG             | 172.16.4.3     | /29  |
 | ZPR_ASW2                                       | Vlan333      | MNG             | 172.16.4.4     | /29  |
-| Филиал в Херсонской области                    |              |                 |                |      |
+|                                               Филиал в Херсонской области                               |
 | Hostname                                       | L3 interface | Description     | IPv4-address   | Mask |
 | ZPR_R1                                         | e0/0         | To_K-Telecom_R1 | 46.130.0.2     | /30  |
 |                                                | e0/1.4       | Gateway_VLAN4   | 192.168.5.65   | /27  |
