@@ -69,7 +69,7 @@ interface Ethernet0/0
 !
 interface Ethernet0/1
  no shutdown
- description To_Ugletelecom_R1
+ description To_UT-com_R1
  ip address 85.26.242.9 255.255.255.252
 !
 interface Ethernet0/2

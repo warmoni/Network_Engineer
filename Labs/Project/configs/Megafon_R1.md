@@ -80,7 +80,7 @@ interface Ethernet0/1.333
 !
 interface Ethernet0/2
  no shutdown
- description To_Lugacom_R1
+ description To_L-com_R1
  ip address 85.26.242.5 255.255.255.252
 !
 interface Ethernet0/3
